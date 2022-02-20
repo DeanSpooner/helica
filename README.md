@@ -18,8 +18,7 @@ As you explore this region, you will have to make choices that will have consequ
 - Map system;
 - HP, damage, enemies and battling system;
 - Images to enhance storytelling;
-- More music/SFX;
-- Favicon to be added.
+- More music/SFX.
 
 ### Known issues
 
