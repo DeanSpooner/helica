@@ -6,23 +6,41 @@ const bluePulse = '#00A7FC';
 const redCol = '#B43519';
 const redPulse = '#FB370C';
 
+const GameContainer = styled.div`
+
+${props => props.bgChange === true && css`
+@keyframes bgChange {
+        0% {
+            background: ${props.prevColor};
+        }
+        100% {
+            background: ${props.currentColor};
+        }
+    }
+    animation: bgChange forwards 2s;
+`}
+${props => `background: ${props.currentColor};`}
+height: 100%;
+`
+
 const GameText = styled.div`
 display: flex;
 color: white;
 flex-direction: column;
-height: 100%;
 `
 
 const MainText = styled.p`
+background-color: #000;
 margin: 0;
 display: inline-flex;
 font-size: 36px;
 justify-content: center;
 padding: 24px 0;
-width: 99%;
+width: 100%;
 ${props => props.clickable && css`
-    border: 5px solid yellow;
-    cursor: pointer;
+border: 5px solid yellow;
+cursor: pointer;
+width: calc(100% - 10px);
 `}
 `
 
@@ -103,4 +121,4 @@ padding: 1rem;
 width: 50%;
 `
 
-export { GameText, MainText, ClickIcon, Choices, LeftChoice, RightChoice };
+export { GameContainer, GameText, MainText, ClickIcon, Choices, LeftChoice, RightChoice };

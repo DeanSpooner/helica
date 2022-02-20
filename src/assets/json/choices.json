@@ -6,7 +6,8 @@
     "1": {
         "text": "...",
         "type": "story",
-        "dest": "2"
+        "dest": "2",
+        "color": "#151515"
     },
     "2": {
         "text": "...You wake up on a small, old boat. A rope anchors it to a creaky, wooden dock.",
@@ -19,14 +20,16 @@
         "dest": "4"
     },
     "4": {
-        "text": "Behind you, the wide ocean spreads into the distance. It must be night - only the faint reflection can be seen on the waves.",
+        "text": "Behind you, the wide ocean spreads into the distance. It must be night - only the faint reflection of the moon can be seen on the waves.",
         "type": "story",
-        "dest": "5"
+        "dest": "5",
+        "color": "#090085"
     },
     "5": {
         "text": "...Why are you here?",
         "type": "story",
-        "dest": "6"
+        "dest": "6",
+        "color": "#151515"
     },
     "6": {
         "text": "You can't remember who you are, where you're from, or how you ended up in this boat...",
@@ -85,7 +88,9 @@
     "11a1": {
         "text": "Carefully, you ease yourself onto the dock. The boards creak as you steady yourself.",
         "type": "story",
-        "dest": "12"
+        "dest": "12",
+        "color": "#280202"
+
     },
     "11b1": {
         "text": "You stay on the boat for a few more minutes to gather yourself - but nothing changes...",
@@ -95,12 +100,14 @@
     "12": {
         "text": "You slowly walk to the end of the dock, onto the rocky ground of the inner cave.",
         "type": "story",
-        "dest": "13"
+        "dest": "13",
+        "color": "#323232"
     },
     "13": {
         "text": "One of the lanterns is attached to the wall to your left. It seems to be made from iron, and is well-worn.",
         "type": "story",
-        "dest": "14"
+        "dest": "14",
+        "color": "#95570E"
     },
     "14": {
         "text": "You wonder whether to take the lantern.",
@@ -117,7 +124,8 @@
     "15a1": {
         "text": "You rip the lantern off the wall. It should come in handy in this place.",
         "type": "story",
-        "dest": "15a2"
+        "dest": "15a2",
+        "color": "#7D4300"
     },
     "15a2": {
         "text": "You creep deeper into the cave, lantern in hand - old wooden crates are stacked along the path.",
@@ -137,7 +145,8 @@
     "15b1": {
         "text": "You leave the lantern - the last thing you want is a glowing beacon bringing attention to you.",
         "type": "story",
-        "dest": "15b2"
+        "dest": "15b2",
+        "color": "#151515"
     },
     "15b2": {
         "text": "You creep deeper into the cave, feeling your way around - it feels like old wooden crates are stacked along the path.",
@@ -157,7 +166,8 @@
     "16": {
         "text": "...Sure enough, footsteps are approaching.",
         "type": "story",
-        "dest": "17"
+        "dest": "17",
+        "color": "#303030"
     },
     "17": {
         "text": "It's too late to hide now.",
@@ -167,7 +177,8 @@
     "18": {
         "text": "The mysterious figure begins to speak...",
         "type": "story",
-        "dest": "19"
+        "dest": "19",
+        "color": "#000"
     },
     "19": {
         "text": "\"Thank you for playing this demo... How will your journey continue? Find out in the next update.\"",
@@ -177,6 +188,7 @@
     "20": {
         "text": "By Dean Spooner. Click to restart the demo.",
         "type": "story",
-        "dest": "1"
+        "dest": "1",
+        "color": "#00450D"
     }
 }

@@ -17,7 +17,6 @@ As you explore this region, you will have to make choices that will have consequ
 - Inventory system;
 - Map system;
 - HP, damage, enemies and battling system;
-- Dynamic background that changes colour based on the story;
 - Images to enhance storytelling;
 - More music/SFX;
 - Favicon to be added.
@@ -28,6 +27,8 @@ As you explore this region, you will have to make choices that will have consequ
 
 ### Version history:
 
+- 0.3.0: Favicon added and dynamic backgrounds implemented to enhance atmosphere e.g. orange background near lanterns, blue background near the sea;
+- 0.2.1: Demo expanded;
 - 0.2.0: Styling updated and sound effects added;
 - 0.1.0: Base system implemented.
 
