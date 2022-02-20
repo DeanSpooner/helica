@@ -52,6 +52,7 @@ background-color: black;
 border: 0;
 border-radius: 12px;
 color: ${textColour};
+cursor: pointer;
 font-family: "Roboto Slab", serif;
 font-size: 1.5em;
 margin-top: 45vh;

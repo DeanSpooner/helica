@@ -39,7 +39,7 @@ const Main = () => {
             Start
           </StartButton>
         </StartButtonContainer>
-        {gameboxDisplay && <Gamebox />}
+        {gameboxDisplay && <Gamebox isPlaying={isPlaying} />}
       </MainContainer>
       <MusicToggle
         isPlaying={isPlaying}
