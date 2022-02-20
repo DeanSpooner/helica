@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/helica/static/css/main.9edeb049.css",
-    "main.js": "/helica/static/js/main.bcfd119a.js",
+    "main.js": "/helica/static/js/main.f3fc6ccf.js",
     "static/js/845.a9ef429f.chunk.js": "/helica/static/js/845.a9ef429f.chunk.js",
     "static/media/moonlight.mp3": "/helica/static/media/moonlight.29cde51d1a70ed0a69a4.mp3",
     "static/media/click.mp3": "/helica/static/media/click.9bdcaeb4c51a8cbf0017.mp3",
     "index.html": "/helica/index.html",
     "main.9edeb049.css.map": "/helica/static/css/main.9edeb049.css.map",
-    "main.bcfd119a.js.map": "/helica/static/js/main.bcfd119a.js.map",
+    "main.f3fc6ccf.js.map": "/helica/static/js/main.f3fc6ccf.js.map",
     "845.a9ef429f.chunk.js.map": "/helica/static/js/845.a9ef429f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9edeb049.css",
-    "static/js/main.bcfd119a.js"
+    "static/js/main.f3fc6ccf.js"
   ]
 }
