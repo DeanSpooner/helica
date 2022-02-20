@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import Gamebox from "./Gamebox";
 import moonlight from "../assets/audio/moonlight.mp3";
 import musicIcon from "../assets/icons/music.png";
 import pauseIcon from "../assets/icons/pause.png";
@@ -14,6 +15,15 @@ import {
 const Main = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [started, setStarted] = useState(false);
+  const [gameboxDisplay, setGameboxDisplay] = useState(false);
+
+  useEffect(() => {
+    if (started) {
+      setTimeout(() => {
+        setGameboxDisplay(true);
+      }, 2000);
+    }
+  }, [started]);
 
   return (
     <div className="main">
@@ -29,6 +39,7 @@ const Main = () => {
             Start
           </StartButton>
         </StartButtonContainer>
+        {gameboxDisplay && <Gamebox />}
       </MainContainer>
       <MusicToggle
         isPlaying={isPlaying}

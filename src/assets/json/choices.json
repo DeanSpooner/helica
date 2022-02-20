@@ -1,0 +1,33 @@
+{
+    "0": {
+        "text": "I'm a little teapot, short and stout.",
+        "type": "blank"
+    },
+    "1": {
+        "text": "I'm a little teapot, short and stout.",
+        "left": {
+            "text": "Here's my handle.",
+            "dest": "2"
+        },
+        "right": {
+            "text": "Here's my spout.",
+            "dest": "3"
+        },
+        "type": "choice"
+    },
+    "2": {
+        "text": "...I think you're more than I can \"handle\".",
+        "type": "story",
+        "dest": "4"
+    },
+    "3": {
+        "text": "...Well you're certainly \"spouting\" a lot of hot air right now.",
+        "type": "story",
+        "dest": "4"
+    },
+    "4": {
+        "text": "End of demo. By Dean Spooner - click to start again.",
+        "type": "story",
+        "dest": "1"
+    }
+}
