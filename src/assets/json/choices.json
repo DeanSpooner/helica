@@ -1,45 +1,182 @@
 {
     "0": {
-        "text": "I'm a little teapot, short and stout.",
+        "text": "",
         "type": "blank"
     },
     "1": {
-        "text": "I'm a little teapot, short and stout.",
-        "left": {
-            "text": "Here's my handle.",
-            "dest": "2"
-        },
-        "right": {
-            "text": "Here's my spout.",
-            "dest": "3"
-        },
-        "type": "choice"
+        "text": "...",
+        "type": "story",
+        "dest": "2"
     },
     "2": {
-        "text": "...I think you're more than I can \"handle\".",
+        "text": "...You wake up on a small, old boat. A rope anchors it to a creaky, wooden dock.",
         "type": "story",
-        "dest": "4"
+        "dest": "3"
     },
     "3": {
-        "text": "...Well you're certainly \"spouting\" a lot of hot air right now.",
+        "text": "It seems to be in some kind of... cave? Two lanterns glow slightly - people must have been here recently.",
         "type": "story",
         "dest": "4"
     },
     "4": {
-        "text": "End of demo. By Dean Spooner - click to start again.",
+        "text": "Behind you, the wide ocean spreads into the distance. It must be night - only the faint reflection can be seen on the waves.",
         "type": "story",
         "dest": "5"
     },
     "5": {
-        "text": "You hear footsteps approaching from within the cave...",
+        "text": "...Why are you here?",
+        "type": "story",
+        "dest": "6"
+    },
+    "6": {
+        "text": "You can't remember who you are, where you're from, or how you ended up in this boat...",
+        "type": "story",
+        "dest": "7"
+    },
+    "7": {
+        "text": "You get up.",
+        "type": "story",
+        "dest": "8"
+    },
+    "8": {
+        "text": "Suddenly, footsteps can be heard - they must be approaching from within the cave...",
         "left": {
             "text": "Hide under the covers in the boat.",
-            "dest": "1"
+            "dest": "9a1"
         },
         "right": {
             "text": "Shout for help.",
-            "dest": "1"
+            "dest": "9b1"
         },
         "type": "choice"
+    },
+    "9a1": {
+        "text": "You hide under the covers.",
+        "type": "story",
+        "dest": "9a2"
+    },
+    "9a2": {
+        "text": "The footsteps seem to get quieter... They must have passed by.",
+        "type": "story",
+        "dest": "10"
+    },
+    "9b1": {
+        "text": "\"Help!\", you shout.",
+        "type": "story",
+        "dest": "9b2"
+    },
+    "9b2": {
+        "text": "The footsteps seem to get quieter... Maybe they didn't hear you?",
+        "type": "story",
+        "dest": "10"
+    },
+    "10": {
+        "text": "You are still in the boat, alone.",
+        "left": {
+            "text": "Carefully climb off the boat onto the dock.",
+            "dest": "11a1"
+        },
+        "right": {
+            "text": "Stay on the boat.",
+            "dest": "11b1"
+        },
+        "type": "choice"
+    },
+    "11a1": {
+        "text": "Carefully, you ease yourself onto the dock. The boards creak as you steady yourself.",
+        "type": "story",
+        "dest": "12"
+    },
+    "11b1": {
+        "text": "You stay on the boat for a few more minutes to gather yourself - but nothing changes...",
+        "type": "story",
+        "dest": "10"
+    },
+    "12": {
+        "text": "You slowly walk to the end of the dock, onto the rocky ground of the inner cave.",
+        "type": "story",
+        "dest": "13"
+    },
+    "13": {
+        "text": "One of the lanterns is attached to the wall to your left. It seems to be made from iron, and is well-worn.",
+        "type": "story",
+        "dest": "14"
+    },
+    "14": {
+        "text": "You wonder whether to take the lantern.",
+        "left": {
+            "text": "Rip the lantern off the wall - you'll need it.",
+            "dest": "15a1"
+        },
+        "right": {
+            "text": "Leave the lantern alone - you don't want to arouse suspicion.",
+            "dest": "15b1"
+        },
+        "type": "choice"
+    },
+    "15a1": {
+        "text": "You rip the lantern off the wall. It should come in handy in this place.",
+        "type": "story",
+        "dest": "15a2"
+    },
+    "15a2": {
+        "text": "You creep deeper into the cave, lantern in hand - old wooden crates are stacked along the path.",
+        "type": "story",
+        "dest": "15a3"
+    },
+    "15a3": {
+        "text": "You try to squeeze past the crates as they narrow your path.",
+        "type": "story",
+        "dest": "15a4"
+    },
+    "15a4": {
+        "text": "Oh no! Your lantern knocks a crate over. Whoever is here before will surely hear you now?",
+        "type": "story",
+        "dest": "16"
+    },
+    "15b1": {
+        "text": "You leave the lantern - the last thing you want is a glowing beacon bringing attention to you.",
+        "type": "story",
+        "dest": "15b2"
+    },
+    "15b2": {
+        "text": "You creep deeper into the cave, feeling your way around - it feels like old wooden crates are stacked along the path.",
+        "type": "story",
+        "dest": "15b3"
+    },
+    "15b3": {
+        "text": "You try to squeeze past the crates as they narrow your path.",
+        "type": "story",
+        "dest": "15b4"
+    },
+    "15b4": {
+        "text": "Oh no! You accidentally knock a crate over. Whoever is here before will surely hear you now?",
+        "type": "story",
+        "dest": "16"
+    },
+    "16": {
+        "text": "...Sure enough, footsteps are approaching.",
+        "type": "story",
+        "dest": "17"
+    },
+    "17": {
+        "text": "It's too late to hide now.",
+        "type": "story",
+        "dest": "18"
+    },
+    "18": {
+        "text": "The mysterious figure begins to speak...",
+        "type": "story",
+        "dest": "19"
+    },
+    "19": {
+        "text": "\"Thank you for playing this demo... How will your journey continue? Find out in the next update.\"",
+        "type": "story",
+        "dest": "20"
+    },
+    "20": {
+        "text": "By Dean Spooner. Click to restart the demo.",
+        "type": "story",
+        "dest": "1"
     }
 }

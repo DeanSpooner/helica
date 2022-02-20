@@ -17,6 +17,7 @@ As you explore this region, you will have to make choices that will have consequ
 - Inventory system;
 - Map system;
 - HP, damage, enemies and battling system;
+- Dynamic background that changes colour based on the story;
 - Images to enhance storytelling;
 - More music/SFX;
 - Favicon to be added.

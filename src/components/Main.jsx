@@ -34,11 +34,13 @@ const Main = () => {
       />
       <Title>Helica</Title>
       <MainContainer started={started}>
-        <StartButtonContainer started={started}>
-          <StartButton started={started} onClick={() => setStarted(!started)}>
-            Start
-          </StartButton>
-        </StartButtonContainer>
+        {!gameboxDisplay && (
+          <StartButtonContainer started={started}>
+            <StartButton started={started} onClick={() => setStarted(!started)}>
+              Start
+            </StartButton>
+          </StartButtonContainer>
+        )}
         {gameboxDisplay && <Gamebox isPlaying={isPlaying} />}
       </MainContainer>
       <MusicToggle

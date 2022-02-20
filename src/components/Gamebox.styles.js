@@ -10,12 +10,15 @@ const GameText = styled.div`
 display: flex;
 color: white;
 flex-direction: column;
+height: 100%;
 `
 
 const MainText = styled.p`
+margin: 0;
 display: inline-flex;
 font-size: 36px;
 justify-content: center;
+padding: 24px 0;
 width: 99%;
 ${props => props.clickable && css`
     border: 5px solid yellow;
@@ -86,16 +89,18 @@ background-color: #19507b;
 border: 5px solid ${blueCol};
 cursor: pointer;
 font-size: 24px;
+margin: 0;
 padding: 1rem;
-width: 47%;
+width: 50%;
 `
 const RightChoice = styled.p`
 background-color: #8D220B;
 border: 5px solid ${redCol};
 cursor: pointer;
 font-size: 24px;
+margin: 0;
 padding: 1rem;
-width: 47%;
+width: 50%;
 `
 
 export { GameText, MainText, ClickIcon, Choices, LeftChoice, RightChoice };
