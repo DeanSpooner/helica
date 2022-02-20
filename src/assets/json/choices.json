@@ -128,19 +128,25 @@
         "color": "#7D4300"
     },
     "15a2": {
-        "text": "You creep deeper into the cave, lantern in hand - old wooden crates are stacked along the path.",
-        "type": "story",
-        "dest": "15a3"
+        "text": "Lantern acquired.",
+        "type": "item",
+        "dest": "15a3",
+        "item": "Lantern"
     },
     "15a3": {
-        "text": "You try to squeeze past the crates as they narrow your path.",
+        "text": "You creep deeper into the cave, lantern in hand - old wooden crates are stacked along the path.",
         "type": "story",
         "dest": "15a4"
     },
     "15a4": {
+        "text": "You try to squeeze past the crates as they narrow your path.",
+        "type": "story",
+        "dest": "15a5"
+    },
+    "15a5": {
         "text": "Oh no! Your lantern knocks a crate over. Whoever is here before will surely hear you now?",
         "type": "story",
-        "dest": "16"
+        "dest": "16a1"
     },
     "15b1": {
         "text": "You leave the lantern - the last thing you want is a glowing beacon bringing attention to you.",
@@ -161,34 +167,283 @@
     "15b4": {
         "text": "Oh no! You accidentally knock a crate over. Whoever is here before will surely hear you now?",
         "type": "story",
-        "dest": "16"
+        "dest": "16b1"
     },
-    "16": {
+    "16a1": {
         "text": "...Sure enough, footsteps are approaching.",
         "type": "story",
-        "dest": "17",
+        "dest": "16a2",
         "color": "#303030"
     },
-    "17": {
+    "16a2": {
         "text": "It's too late to hide now.",
         "type": "story",
-        "dest": "18"
+        "dest": "16a3"
     },
-    "18": {
+    "16a3": {
         "text": "The mysterious figure begins to speak...",
         "type": "story",
-        "dest": "19",
+        "dest": "16a4",
         "color": "#000"
     },
+    "16a4": {
+        "text": "\"Great - another thief stealing my lanterns, just what I need!\"",
+        "type": "story",
+        "dest": "16a5"
+    },
+    "16a5": {
+        "text": "It is the voice of a gruff man. Slim, short, 50s, wearing some kind of uniform adorned with badges.",
+        "type": "story",
+        "dest": "16a6"
+    },
+    "16a6": {
+        "text": "He seems suspicious of you.",
+        "type": "story",
+        "dest": "16a7"
+    },
+    "16a7": {
+        "text": "\"Why on earth would you want to steal my lanterns?!\"",
+        "type": "choice",
+        "left": {
+            "text": "\"I'm sorry, I don't know why I'm here or anything, I just needed something to help me out of here.\"",
+            "dest": "16a8"
+        },
+        "right": {
+            "text": "\"...This is my lantern? I didn't steal anything.\"",
+            "dest": "16a8"
+        }
+    },
+    "16a8": {
+        "text": "Before you could even speak: \"Actually - forget it. I don't want to hear it. Keep the thing and get out.\"",
+        "type": "story",
+        "dest": "17"
+    },
+    "16b1": {
+        "text": "...Sure enough, footsteps are approaching.",
+        "type": "story",
+        "dest": "16b2",
+        "color": "#303030"
+    },
+    "16b2": {
+        "text": "It's too late to hide now.",
+        "type": "story",
+        "dest": "16b3"
+    },
+    "16b3": {
+        "text": "The mysterious figure begins to speak...",
+        "type": "story",
+        "dest": "16b4",
+        "color": "#000"
+    },
+    "16b4": {
+        "text": "\"Goodness me, are you alright? What on earth are you doing around here in the dark?\"",
+        "type": "story",
+        "dest": "16b5"
+    },
+    "16b5": {
+        "text": "It is the voice of a gruff man. Slim, short, 50s, wearing some kind of uniform adorned with badges.",
+        "type": "story",
+        "dest": "16b6"
+    },
+    "16b6": {
+        "text": "He seems concerned for you.",
+        "type": "story",
+        "dest": "16b7"
+    },
+    "16b7": {
+        "text": "\"I thought I heard someone around here - look, take this lantern and get up into town.\"",
+        "type": "choice",
+        "left": {
+            "text": "\"No no, I couldn't possibly...\"",
+            "dest": "16b8"
+        },
+        "right": {
+            "text": "\"Thank you.\"",
+            "dest": "16b8"
+        }
+    },
+    "16b8": {
+        "text": "Before you could even speak: \"I insist!\" The man kindly places the lantern in your hand.",
+        "type": "story",
+        "dest": "16b9"
+    },
+    "16b9": {
+        "text": "Lantern acquired.",
+        "type": "item",
+        "item": "Lantern",
+        "dest": "16b10"
+    },
+    "16b10": {
+        "text": "The man points you in the direction to head, apologising for not being able to accompany you while doing his job. You leave him be.",
+        "type": "story",
+        "dest": "17"
+    },
+    "17": {
+        "text": "You head further into the cave, your lantern lighting the way.",
+        "type": "story",
+        "dest": "18",
+        "color": "#8E5800"
+    },
+    "18": {
+        "text": "The path starts to become steeper, before levelling out again about twenty metres later.",
+        "type": "story",
+        "dest": "19"
+    },
     "19": {
-        "text": "\"Thank you for playing this demo... How will your journey continue? Find out in the next update.\"",
+        "text": "You come across a fork in the path.",
         "type": "story",
         "dest": "20"
     },
     "20": {
-        "text": "By Dean Spooner. Click to restart the demo.",
+        "text": "The left path seems to have an old wooden door at the end.",
         "type": "story",
-        "dest": "1",
-        "color": "#00450D"
+        "dest": "21",
+        "color": "#50370E"
+    },
+    "21": {
+        "text": "The right path seems to have a narrow crevice you might just be able to squeeze through.",
+        "type": "story",
+        "dest": "22",
+        "color": "#1A1205"
+    },
+    "22": {
+        "text": "Left or right?",
+        "type": "choice",
+        "left": {
+            "text": "Left: the wooden door.",
+            "dest": "23a1"
+        },
+        "right": {
+            "text": "Right: the narrow crevice.",
+            "dest": "23b1"
+        }
+    },
+    "23a1": {
+        "text": "You try to open the door, but it is locked.",
+        "type": "story",
+        "dest": "23a2",
+        "color": "#50370E"
+    },
+    "23a2": {
+        "text": "You go back.",
+        "type": "story",
+        "dest": "22"
+    },
+    "23b1": {
+        "text": "You try to squeeze through the narrow crevice...",
+        "type": "story",
+        "dest": "23b2",
+        "color": "#1A1205"
+    },
+    "23b2": {
+        "text": "...and you just make it through!",
+        "type": "story",
+        "dest": "23b3"
+    },
+    "23b3": {
+        "text": "This small cave is full of junk - old gear, rugs, broken chairs litter the floor.",
+        "type": "story",
+        "dest": "23b4",
+        "color": "#8E5800"
+    },
+    "23b4": {
+        "text": "On the ground, you see an old, rusty key.",
+        "type": "story",
+        "dest": "23b5",
+        "color": "#8E5800"
+    },
+    "23b5": {
+        "text": "Do you take the key?",
+        "type": "choice",
+        "left": {
+            "text": "Yes.",
+            "dest": "23b7"
+        },
+        "right": {
+            "text": "No.",
+            "dest": "23b6"
+        }
+    },
+    "23b6": {
+        "text": "You leave the key on the ground and return to the fork through the crevice.",
+        "type": "story",
+        "dest": "22"
+    },
+    "23b7": {
+        "text": "You pick up the key and put it in your pocket before returning to the fork through the crevice.",
+        "type": "story",
+        "dest": "23b8"
+    },
+    "23b8": {
+        "text": "Key acquired.",
+        "type": "item",
+        "item": "Key",
+        "dest": "24"
+    },
+    "24": {
+        "text": "You go to the door.",
+        "type": "story",
+        "dest": "25",
+        "color": "#50370E"
+    },
+    "25": {
+        "text": "Using the key, you twist it...",
+        "type": "choice",
+        "left": {
+            "text": "...gently.",
+            "dest": "26a1"
+        },
+        "right": {
+            "text": "...strongly.",
+            "dest": "26b1"
+        }
+    },
+    "26a1": {
+        "text": "...SNAP! The key has broken in the door?! But you only twisted it gently!",
+        "type": "story",
+        "dest": "27"
+    },
+    "26b1": {
+        "text": "...SNAP! The key has broken in the door?! Well you did twist it strongly!",
+        "type": "story",
+        "dest": "27"
+    },
+    "27": {
+        "text": "Key used.",
+        "type": "used",
+        "item": "Key",
+        "dest": "28"
+    },
+    "28": {
+        "text": "But, did it still manage to unlock the door..?",
+        "type": "story",
+        "dest": "29"
+    },
+    "29": {
+        "text": "Yes! The door is unlocked! You open it and step through.",
+        "type": "story",
+        "dest": "30"
+    },
+    "30": {
+        "text": "Within the room, you can see a huge sign, and painted on it with huge red letters you read...",
+        "type": "story",
+        "dest": "31",
+        "color": "#F55952"
+    },
+    "31": {
+        "text": "\"...SORRY! THAT'S THE END OF THE DEMO!\"",
+        "type": "story",
+        "dest": "32",
+        "color": "#BABABA"
+    },
+    "32": {
+        "text": "You have completed the demo! Thank you for playing along. Please look forward to future updates.",
+        "type": "story",
+        "dest": "33"
+    },
+    "33": {
+        "text": "By Dean Spooner. Click to restart.",
+        "type": "restart",
+        "dest": "1"
     }
 }

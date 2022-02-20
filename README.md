@@ -14,7 +14,6 @@ As you explore this region, you will have to make choices that will have consequ
 - Possible use of backend system to store choices/flags, and integrate deeper overall system;
 - Automatic saving to web cache;
 - Player naming system;
-- Inventory system;
 - Map system;
 - HP, damage, enemies and battling system;
 - Images to enhance storytelling;
@@ -26,6 +25,7 @@ As you explore this region, you will have to make choices that will have consequ
 
 ### Version history:
 
+- 0.4.0: Basic inventory system added;
 - 0.3.0: Favicon added and dynamic backgrounds implemented to enhance atmosphere e.g. orange background near lanterns, blue background near the sea;
 - 0.2.1: Demo expanded;
 - 0.2.0: Styling updated and sound effects added;

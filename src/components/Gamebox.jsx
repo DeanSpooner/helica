@@ -7,6 +7,8 @@ import {
   LeftChoice,
   MainText,
   RightChoice,
+  InventoryBox,
+  InventoryText,
 } from "./Gamebox.styles";
 import Typewriter from "typewriter-effect";
 import useSound from "use-sound";
@@ -21,6 +23,7 @@ const Gamebox = (isPlaying) => {
   const [prevColor, setPrevColor] = useState("#151515");
   const [bgChange, setBgChange] = useState(false);
   const [playClick] = useSound(clickSound);
+  const [inventory, setInventory] = useState([]);
 
   useEffect(() => {
     setTimeout(() => {
@@ -43,6 +46,25 @@ const Gamebox = (isPlaying) => {
     setUpcomingFlag(choices[currentFlag].dest);
   };
 
+  const handleItemClick = () => {
+    isPlaying && playClick(); // Not working as intended? Doesn't acknowledge isPlaying state?
+    inventory.push(choices[currentFlag].item);
+    setUpcomingFlag(choices[currentFlag].dest);
+  };
+
+  const handleItemUseClick = () => {
+    isPlaying && playClick(); // Not working as intended? Doesn't acknowledge isPlaying state?
+    const filteredItems = inventory.filter(item => item !== choices[currentFlag].item)
+    setInventory(filteredItems);
+    setUpcomingFlag(choices[currentFlag].dest);
+  };
+
+  const handleRestartClick = () => {
+    isPlaying && playClick(); // Not working as intended? Doesn't acknowledge isPlaying state?
+    setInventory([]);
+    setUpcomingFlag(choices[currentFlag].dest);
+  };
+
   const handleLeftClick = () => {
     isPlaying && playClick(); // Not working as intended? Doesn't acknowledge isPlaying state?
     setUpcomingFlag(choices[currentFlag].left.dest);
@@ -58,6 +80,48 @@ const Gamebox = (isPlaying) => {
       <GameText>
         {choices[currentFlag].type === "story" && (
           <MainText clickable onClick={handleMainClick}>
+            <Typewriter
+              options={{
+                strings: choices[currentFlag].text,
+                autoStart: true,
+                loop: false,
+                delay: 50,
+                cursor: "",
+              }}
+            />
+            <ClickIcon src={handIcon} yellow />
+          </MainText>
+        )}
+        {choices[currentFlag].type === "item" && (
+          <MainText clickable onClick={handleItemClick}>
+            <Typewriter
+              options={{
+                strings: choices[currentFlag].text,
+                autoStart: true,
+                loop: false,
+                delay: 50,
+                cursor: "",
+              }}
+            />
+            <ClickIcon src={handIcon} yellow />
+          </MainText>
+        )}
+        {choices[currentFlag].type === "used" && (
+          <MainText clickable onClick={handleItemUseClick}>
+            <Typewriter
+              options={{
+                strings: choices[currentFlag].text,
+                autoStart: true,
+                loop: false,
+                delay: 50,
+                cursor: "",
+              }}
+            />
+            <ClickIcon src={handIcon} yellow />
+          </MainText>
+        )}
+        {choices[currentFlag].type === "restart" && (
+          <MainText clickable onClick={handleRestartClick}>
             <Typewriter
               options={{
                 strings: choices[currentFlag].text,
@@ -112,6 +176,11 @@ const Gamebox = (isPlaying) => {
           </>
         )}
       </GameText>
+      {inventory.length > 0 && <InventoryBox>
+        <InventoryText>
+          Inventory: {inventory.map(item => <>{item}{" "}</>)}
+        </InventoryText>
+      </InventoryBox>}
     </GameContainer>
   );
 };

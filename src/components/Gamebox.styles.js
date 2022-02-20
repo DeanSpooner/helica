@@ -121,4 +121,27 @@ padding: 1rem;
 width: 50%;
 `
 
-export { GameContainer, GameText, MainText, ClickIcon, Choices, LeftChoice, RightChoice };
+const InventoryBox = styled.div`
+display: flex;
+color: white;
+flex-direction: column;
+margin: 0 auto;
+`
+
+const InventoryText = styled.p`
+background-color: #000;
+margin: 0;
+display: inline-flex;
+font-size: 16px;
+width: 100%;
+border: 5px solid green;
+width: calc(50% - 10px);
+text-align: left;
+padding: 24px 0;
+::before {
+    content: "";
+    margin-right: 24px;
+}
+`
+
+export { GameContainer, GameText, MainText, ClickIcon, Choices, LeftChoice, RightChoice, InventoryBox, InventoryText };
