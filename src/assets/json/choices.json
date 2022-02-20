@@ -28,6 +28,18 @@
     "4": {
         "text": "End of demo. By Dean Spooner - click to start again.",
         "type": "story",
-        "dest": "1"
+        "dest": "5"
+    },
+    "5": {
+        "text": "You hear footsteps approaching from within the cave...",
+        "left": {
+            "text": "Hide under the covers in the boat.",
+            "dest": "1"
+        },
+        "right": {
+            "text": "Shout for help.",
+            "dest": "1"
+        },
+        "type": "choice"
     }
 }
