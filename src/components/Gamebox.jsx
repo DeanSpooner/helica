@@ -9,16 +9,14 @@ import {
   RightChoice,
   InventoryBox,
   InventoryText,
+  Item
 } from "./Gamebox.styles";
 import Typewriter from "typewriter-effect";
 import useSound from "use-sound";
 import clickSound from "../assets/audio/click.mp3";
-import choices from "../assets/json/choices.json";
 import handIcon from "../assets/icons/hand.png";
 
-const Gamebox = (isPlaying) => {
-  const [currentFlag, setCurrentFlag] = useState(1);
-  const [upcomingFlag, setUpcomingFlag] = useState(1);
+const Gamebox = ({isPlaying, choices, currentFlag, setCurrentFlag, upcomingFlag, setUpcomingFlag}) => {
   const [currentColor, setCurrentColor] = useState("#151515");
   const [prevColor, setPrevColor] = useState("#151515");
   const [bgChange, setBgChange] = useState(false);
@@ -85,7 +83,7 @@ const Gamebox = (isPlaying) => {
                 strings: choices[currentFlag].text,
                 autoStart: true,
                 loop: false,
-                delay: 50,
+                delay: 20,
                 cursor: "",
               }}
             />
@@ -99,7 +97,7 @@ const Gamebox = (isPlaying) => {
                 strings: choices[currentFlag].text,
                 autoStart: true,
                 loop: false,
-                delay: 50,
+                delay: 20,
                 cursor: "",
               }}
             />
@@ -113,7 +111,7 @@ const Gamebox = (isPlaying) => {
                 strings: choices[currentFlag].text,
                 autoStart: true,
                 loop: false,
-                delay: 50,
+                delay: 20,
                 cursor: "",
               }}
             />
@@ -127,7 +125,7 @@ const Gamebox = (isPlaying) => {
                 strings: choices[currentFlag].text,
                 autoStart: true,
                 loop: false,
-                delay: 50,
+                delay: 20,
                 cursor: "",
               }}
             />
@@ -142,7 +140,7 @@ const Gamebox = (isPlaying) => {
                   strings: choices[currentFlag].text,
                   autoStart: true,
                   loop: false,
-                  delay: 50,
+                  delay: 20,
                   cursor: "",
                 }}
               />
@@ -154,7 +152,7 @@ const Gamebox = (isPlaying) => {
                     strings: choices[currentFlag].left.text,
                     autoStart: true,
                     loop: false,
-                    delay: 50,
+                    delay: 20,
                     cursor: "",
                   }}
                 />
@@ -166,7 +164,7 @@ const Gamebox = (isPlaying) => {
                     strings: choices[currentFlag].right.text,
                     autoStart: true,
                     loop: false,
-                    delay: 50,
+                    delay: 20,
                     cursor: "",
                   }}
                 />
@@ -178,7 +176,7 @@ const Gamebox = (isPlaying) => {
       </GameText>
       {inventory.length > 0 && <InventoryBox>
         <InventoryText>
-          Inventory: {inventory.map(item => <>{item}{" "}</>)}
+          Inventory: {inventory.map(item => <Item className="item">{item}</Item>)}
         </InventoryText>
       </InventoryBox>}
     </GameContainer>

@@ -21,10 +21,11 @@ As you explore this region, you will have to make choices that will have consequ
 
 ### Known issues
 
-- Sound effects play regardless of whether the player has chosen to mute the game or not.
+- All resolved.
 
 ### Version history:
 
+- 0.5.0: More sound effects and music tracks added. SFX issue resolved. Chapter 1 completed, chapter 2 partially completed. Starting choice of chapter for quicker access to further parts of the game;
 - 0.4.0: Basic inventory system added;
 - 0.3.0: Favicon added and dynamic backgrounds implemented to enhance atmosphere e.g. orange background near lanterns, blue background near the sea;
 - 0.2.1: Demo expanded;

@@ -1,13 +1,27 @@
 {
     "0": {
         "text": "",
-        "type": "blank"
+        "type": "blank"        
+    },
+    "0a": {
+        "text": "...",
+        "type": "choice",
+        "left": {
+            "text": "CHAPTER 1 - AWAKENING",
+            "dest": "1"
+        },
+        "right": {
+            "text": "CHAPTER 2 - JUDGEMENT",
+            "dest": "Chapter2pre"
+        },
+        "music": "mystery"
     },
     "1": {
-        "text": "...",
+        "text": "CHAPTER 1 - AWAKENING",
         "type": "story",
         "dest": "2",
-        "color": "#151515"
+        "color": "#151515",
+        "music": "moonlight"
     },
     "2": {
         "text": "...You wake up on a small, old boat. A rope anchors it to a creaky, wooden dock.",
@@ -51,7 +65,8 @@
             "text": "Shout for help.",
             "dest": "9b1"
         },
-        "type": "choice"
+        "type": "choice",
+        "music": "tension"
     },
     "9a1": {
         "text": "You hide under the covers.",
@@ -83,7 +98,8 @@
             "text": "Stay on the boat.",
             "dest": "11b1"
         },
-        "type": "choice"
+        "type": "choice",
+        "music": "moonlight"
     },
     "11a1": {
         "text": "Carefully, you ease yourself onto the dock. The boards creak as you steady yourself.",
@@ -101,7 +117,8 @@
         "text": "You slowly walk to the end of the dock, onto the rocky ground of the inner cave.",
         "type": "story",
         "dest": "13",
-        "color": "#323232"
+        "color": "#323232",
+        "music": "explorer"
     },
     "13": {
         "text": "One of the lanterns is attached to the wall to your left. It seems to be made from iron, and is well-worn.",
@@ -146,7 +163,9 @@
     "15a5": {
         "text": "Oh no! Your lantern knocks a crate over. Whoever is here before will surely hear you now?",
         "type": "story",
-        "dest": "16a1"
+        "dest": "16a1",
+        "music": "null",
+        "sfx": "crash"
     },
     "15b1": {
         "text": "You leave the lantern - the last thing you want is a glowing beacon bringing attention to you.",
@@ -167,18 +186,22 @@
     "15b4": {
         "text": "Oh no! You accidentally knock a crate over. Whoever is here before will surely hear you now?",
         "type": "story",
-        "dest": "16b1"
+        "dest": "16b1",
+        "music": "null",
+        "sfx": "crash"
     },
     "16a1": {
         "text": "...Sure enough, footsteps are approaching.",
         "type": "story",
         "dest": "16a2",
-        "color": "#303030"
+        "color": "#303030",
+        "sfx": "steps"
     },
     "16a2": {
         "text": "It's too late to hide now.",
         "type": "story",
-        "dest": "16a3"
+        "dest": "16a3",
+        "sfx": "null"
     },
     "16a3": {
         "text": "The mysterious figure begins to speak...",
@@ -189,7 +212,8 @@
     "16a4": {
         "text": "\"Great - another thief stealing my lanterns, just what I need!\"",
         "type": "story",
-        "dest": "16a5"
+        "dest": "16a5",
+        "music": "stranger"
     },
     "16a5": {
         "text": "It is the voice of a gruff man. Slim, short, 50s, wearing some kind of uniform adorned with badges.",
@@ -222,12 +246,14 @@
         "text": "...Sure enough, footsteps are approaching.",
         "type": "story",
         "dest": "16b2",
-        "color": "#303030"
+        "color": "#303030",
+        "sfx": "steps"
     },
     "16b2": {
         "text": "It's too late to hide now.",
         "type": "story",
-        "dest": "16b3"
+        "dest": "16b3",
+        "sfx": "null"
     },
     "16b3": {
         "text": "The mysterious figure begins to speak...",
@@ -238,7 +264,8 @@
     "16b4": {
         "text": "\"Goodness me, are you alright? What on earth are you doing around here in the dark?\"",
         "type": "story",
-        "dest": "16b5"
+        "dest": "16b5",
+        "music": "stranger"
     },
     "16b5": {
         "text": "It is the voice of a gruff man. Slim, short, 50s, wearing some kind of uniform adorned with badges.",
@@ -282,7 +309,8 @@
         "text": "You head further into the cave, your lantern lighting the way.",
         "type": "story",
         "dest": "18",
-        "color": "#8E5800"
+        "color": "#8E5800",
+        "music": "explorer"
     },
     "18": {
         "text": "The path starts to become steeper, before levelling out again about twenty metres later.",
@@ -341,7 +369,7 @@
         "dest": "23b3"
     },
     "23b3": {
-        "text": "This small cave is full of junk - old gear, rugs, broken chairs litter the floor.",
+        "text": "This small cave is full of junk - rusted cogs, broken chairs, debris litter the floor.",
         "type": "story",
         "dest": "23b4",
         "color": "#8E5800"
@@ -394,7 +422,7 @@
             "dest": "26a1"
         },
         "right": {
-            "text": "...strongly.",
+            "text": "...firmly.",
             "dest": "26b1"
         }
     },
@@ -404,7 +432,7 @@
         "dest": "27"
     },
     "26b1": {
-        "text": "...SNAP! The key has broken in the door?! Well you did twist it strongly!",
+        "text": "...SNAP! The key has broken in the door?! Well you did twist it firmly!",
         "type": "story",
         "dest": "27"
     },
@@ -422,28 +450,467 @@
     "29": {
         "text": "Yes! The door is unlocked! You open it and step through.",
         "type": "story",
-        "dest": "30"
+        "dest": "30",
+        "music": "null",
+        "sfx": "steps"
     },
     "30": {
-        "text": "Within the room, you can see a huge sign, and painted on it with huge red letters you read...",
+        "text": "Within the room, you can see a huge banner, and painted on it with huge red letters you read...",
         "type": "story",
         "dest": "31",
-        "color": "#F55952"
+        "color": "#F55952",
+        "music": "search",
+        "sfx": "null"
     },
     "31": {
-        "text": "\"...SORRY! THAT'S THE END OF THE DEMO!\"",
+        "text": "\"HELICA ISLE STORAGE\"",
         "type": "story",
         "dest": "32",
         "color": "#BABABA"
     },
     "32": {
-        "text": "You have completed the demo! Thank you for playing along. Please look forward to future updates.",
+        "text": "Jars, bottles, cans, boxes, and crates of various sizes and shapes are stacked neatly on shelves.",
         "type": "story",
         "dest": "33"
     },
     "33": {
+        "text": "This is clearly a storage room of some sort. Everything is much more organised than earlier.",
+        "type": "story",
+        "dest": "34"
+    },
+    "34": {
+        "text": "You are behind some kind of counter. You climb over it and approach the other door in the room.",
+        "type": "story",
+        "dest": "35"
+    },
+    "35": {
+        "text": "You open the door and step through.",
+        "type": "story",
+        "dest": "36"
+    },
+    "36": {
+        "text": "The sky! You can see the sky!",
+        "type": "story",
+        "dest": "37",
+        "color": "#090085"
+    },
+    "37": {
+        "text": "Before you is a ladder that climbs 30ft high. You seem to be in some kind of well.",
+        "type": "story",
+        "dest": "38"
+    },
+    "38": {
+        "text": "A rope also dangles before you from above. You cannot see where the other end is attached.",
+        "type": "story",
+        "dest": "39"
+    },
+    "39": {
+        "text": "You choose to climb...",
+        "type": "choice",
+        "left": {
+            "text": "...up the ladder.",
+            "dest": "40a1"
+        },
+        "right": {
+            "text": "...up the rope.",
+            "dest": "41"
+        }
+    },
+    "40a1": {
+        "text": "You begin to climb the ladder...",
+        "type": "story",
+        "dest": "40a2"
+    },
+    "40a2": {
+        "text": "...SNAP!",
+        "type": "story",
+        "dest": "40a3",
+        "sfx": "crash",
+        "color": "#ff5555"
+    },
+    "40a3": {
+        "text": "...you fall down five rungs and hit the rocky ground! The ladder must have been too weak!",
+        "type": "story",
+        "dest": "40a4",
+        "sfx": "null",
+        "color": "#090085"
+    },
+    "40a4": {
+        "text": "You get yourself up. No choice now but to use the rope.",
+        "type": "story",
+        "dest": "41"
+    },
+    "41": {
+        "text": "You begin to climb the rope...",
+        "type": "story",
+        "dest": "42"
+    },
+    "42": {
+        "text": "...and make it to the top!",
+        "type": "story",
+        "dest": "Chapter2"
+    },
+    "Chapter2pre": {
+        "text": "Lantern acquired.",
+        "type": "item",
+        "item": "Lantern",
+        "dest": "Chapter2"
+    },
+    "Chapter2": {
+        "text": "CHAPTER 2 - JUDGEMENT",
+        "type": "story",
+        "dest": "43",
+        "color": "#000",
+        "music": "null"
+    },
+    "43": {
+        "text": "You clamber onto the grass. You are now in a grassy field.",
+        "type": "story",
+        "dest": "44",
+        "color": "#090085",
+        "music": "mystery"
+    },
+    "44": {
+        "text": "It is still night. The moon hangs above you - it must be late.",
+        "type": "story",
+        "dest": "45"
+    },
+    "45": {
+        "text": "The air feels fresh, but just as you begin to feel better, rain starts to fall.",
+        "type": "story",
+        "dest": "46"
+    },
+    "46": {
+        "text": "The lantern still glows dimly, but you had best get moving and find somewhere safe to rest for the night.",
+        "type": "story",
+        "dest": "47"
+    },
+    "47": {
+        "text": "To your south, the sea laps against rocky cliffs. Looking down, you can faintly see a boat - was that the boat you woke up in?",
+        "type": "story",
+        "dest": "48"
+    },
+    "48": {
+        "text": "To your east, a small hut sits alone. You can see its curtains are drawn.",
+        "type": "story",
+        "dest": "49"
+    },
+    "49": {
+        "text": "To your west, a rocky trail leads to dark woods.",
+        "type": "story",
+        "dest": "50"
+    },
+    "50": {
+        "text": "You decide to go...",
+        "type": "choice",
+        "left": {
+            "text": "...east, to the hut.",
+            "dest": "hut1"
+        },
+        "right": {
+            "text": "...west, to the woods.",
+            "dest": "woods1"
+        }
+    },
+    "hut1": {
+        "text": "You approach the hut. It appears to be made of wood, its roof thatched from branches of trees.",
+        "type": "story",
+        "dest": "hut2",
+        "color": "#23020f"
+    },
+    "hut2": {
+        "text": "A small door, shorter than you, lies at the front. An open window sits to the right of the door.",
+        "type": "story",
+        "dest": "hut3"
+    },
+    "hut3": {
+        "text": "You decide to...",
+        "type": "choice",
+        "left": {
+            "text": "...knock on the door.",
+            "dest": "hut4a1"
+        },
+        "right": {
+            "text": "...climb through the window.",
+            "dest": "hut4b1"
+        }
+    },
+    "hut4a1": {
+        "text": "You knock on the door...",
+        "type": "story",
+        "dest": "hut4a2",
+        "music": "null",
+        "sfx": "knock"
+    },
+    "hut4a2": {
+        "text": "...and hear a loud thud from inside.",
+        "type": "story",
+        "dest": "hut4a3",
+        "sfx": "thud"
+    },
+    "hut4a3": {
+        "text": "Someone or something is definitely inside.",
+        "type": "story",
+        "dest": "hut4a4",
+        "sfx": "null"
+    },
+    "hut4a4": {
+        "text": "The door creaks open...",
+        "type": "story",
+        "dest": "hut4a5"
+    },
+    "hut4a5": {
+        "text": "...to show a little old lady, smiling.",
+        "type": "story",
+        "dest": "hut4a6"
+    },
+    "hut4a6": {
+        "text": "\"Hello,\" she says.",
+        "type": "story",
+        "dest": "hut4a7",
+        "music": "stranger"
+    },
+    "hut4a7": {
+        "text": "\"Is anything the matter?\"",
+        "type": "story",
+        "dest": "hut4a8"
+    },
+    "hut4a8": {
+        "text": "\"I'm not sure where I am. I need help, and a place to stay for the night,\" you reply.",
+        "type": "story",
+        "dest": "hut4a9"
+    },
+    "hut4a9": {
+        "text": "\"Please my dear, come on in,\" she says.",
+        "type": "story",
+        "dest": "hut4a10"
+    },
+    "hut4a10": {
+        "text": "You crouch and step inside.",
+        "type": "story",
+        "dest": "hut4a11"
+    },
+    "hut4a11": {
+        "text": "The little lady smiles and says, \"I'm glad you're here.\"",
+        "type": "story",
+        "dest": "hut4a12"
+    },
+    "hut4a12": {
+        "text": "\"...\"",
+        "type": "story",
+        "dest": "end1",
+        "music": "null"
+    },
+    "hut4b1": {
+        "text": "You climb through the window...",
+        "type": "story",
+        "dest": "hut4b2",
+        "music": "null"
+    },
+    "hut4b2": {
+        "text": "...and see a little old lady, lying in a small bed.",
+        "type": "story",
+        "dest": "hut4b3"
+    },
+    "hut4b3": {
+        "text": "...Is she asleep?",
+        "type": "story",
+        "dest": "hut4b4"
+    },
+    "hut4b4": {
+        "text": "...Suddenly, the window shuts behind you!",
+        "type": "story",
+        "dest": "hut4b5",
+        "music": "tension"
+    },
+    "hut4b5": {
+        "text": "...You hear a voice from the bed.",
+        "type": "story",
+        "dest": "hut4b6"
+    },
+    "hut4b6": {
+        "text": "\"...YOU... ARE NOT WELCOME.\"",
+        "type": "story",
+        "dest": "hut4b7"
+    },
+    "hut4b7": {
+        "text": "...Everything goes black.",
+        "type": "story",
+        "dest": "end1",
+        "color": "#000",
+        "music": "null"
+    },
+    "woods1": {
+        "text": "You approach the woods...",
+        "type": "story",
+        "dest": "woods2",
+        "music": "woods",
+        "color": "#23020f"
+    },
+    "woods2": {
+        "text": "The light in your lantern is fading - it must be running out of oil.",
+        "type": "story",
+        "dest": "woods3"
+    },
+    "woods3": {
+        "text": "...You can hear something rustling ahead. Someone or something is coming.",
+        "type": "story",
+        "dest": "woods4"
+    },
+    "woods4": {
+        "text": "It's getting closer...",
+        "type": "story",
+        "dest": "woods5"
+    },
+    "woods5": {
+        "text": "You decide to...",
+        "type": "choice",
+        "music": "tension",
+        "left": {
+            "text": "...throw your torch and hide.",
+            "dest": "woods6a1"
+        },
+        "right": {
+            "text": "...stay where you are.",
+            "dest": "woods6b1"
+        }
+    },
+    "woods6a1": {
+        "text": "You hide in a bush, behind a tree, entinguishing and removing your lantern...",
+        "type": "story",
+        "dest": "woods6a2"
+    },
+    "woods6a2": {
+        "text": "Lantern removed.",
+        "type": "used",
+        "item": "Lantern",
+        "dest": "woods6a3"
+    },
+    "woods6a3": {
+        "text": "...but the sound keeps getting closer.",
+        "type": "story",
+        "dest": "woods6a4"
+    },
+    "woods6a4": {
+        "text": "You hear a loud growl.",
+        "type": "story",
+        "dest": "woods6a5",
+        "color": "#F55952",
+        "music": "null"
+    },
+    "woods6a5": {
+        "text": "...Everything goes black.",
+        "type": "story",
+        "dest": "end1",
+        "color": "#000"
+    },
+    "woods6b1": {
+        "text": "You stay where you are...",
+        "type": "story",
+        "dest": "woods6b2"
+    },
+    "woods6b2": {
+        "text": "...but the sound keeps getting closer.",
+        "type": "story",
+        "dest": "woods6b3"
+    },
+    "woods6b3": {
+        "text": "You hear a loud growl.",
+        "type": "story",
+        "dest": "woods6b4",
+        "color": "#F55952"
+    },
+    "woods6b4": {
+        "text": "...It's a wolf!",
+        "type": "story",
+        "dest": "woods6b5",
+        "color": "#1d1d1d"
+    },
+    "woods6b5": {
+        "text": "You decide to...",
+        "type": "choice",
+        "left": {
+            "text": "...keep calm and still.",
+            "dest": "woods6b6a1"
+        },
+        "right": {
+            "text": "...attack the wolf with your lantern.",
+            "dest": "woods6b6b1"
+        }
+    },
+    "woods6b6a1": {
+        "text": "You stay calm and still...",
+        "type": "story",
+        "dest": "woods6b6a2"
+    },
+    "woods6b6a2": {
+        "text": "...but the wolf leaps at you!.",
+        "type": "story",
+        "dest": "woods6b6a3",
+        "color": "#F55952",
+        "music": "battle"
+    },
+    "woods6b6a3": {
+        "text": "...Everything goes black.",
+        "type": "story",
+        "dest": "end1",
+        "color": "#000"
+    },
+    "woods6b6b1": {
+        "text": "You stand firm, your lantern grasped tightly in your hand...",
+        "type": "story",
+        "dest": "woods6b6b2"
+    },
+    "woods6b6b2": {
+        "text": "...and the wolf leaps at you!",
+        "type": "story",
+        "dest": "woods6b6b3",
+        "color": "#F55952",
+        "music": "battle"
+    },
+    "woods6b6b3": {
+        "text": "...You swing your lantern at the wolf, and smash into its skull!",
+        "type": "story",
+        "dest": "woods6b6b4"
+    },
+    "woods6b6b4": {
+        "text": "The wolf is injured... Is it frightened of you now?",
+        "type": "story",
+        "dest": "woods6b6b5",
+        "color": "#1d1d1d"
+    },
+    "woods6b6b5": {
+        "text": "The wolf runs away, whimpering.",
+        "type": "story",
+        "dest": "woods6b6b6"
+    },
+    "woods6b6b6": {
+            "text": "Lantern broken.",
+            "type": "used",
+            "item": "Lantern",
+            "dest": "woods7"
+    },
+    "woods7": {
+        "text": "You are now alone in the woods. All is quiet again.",
+        "type": "story",
+        "dest": "woods8",
+        "music": "woods"
+    },
+    "woods8": {
+        "text": "But now, with no lantern, how will you continue..?",
+        "type": "story",
+        "dest": "end1"
+    },   
+    "end1": {
+        "text": "Thank you for playing. Helica will continue in the next update.",
+        "type": "story",
+        "dest": "end2",
+        "music": "mystery",
+        "color": "#000"
+    },
+    "end2": {
         "text": "By Dean Spooner. Click to restart.",
         "type": "restart",
-        "dest": "1"
+        "dest": "0a"
     }
 }

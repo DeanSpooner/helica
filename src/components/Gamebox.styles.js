@@ -144,4 +144,12 @@ padding: 24px 0;
 }
 `
 
-export { GameContainer, GameText, MainText, ClickIcon, Choices, LeftChoice, RightChoice, InventoryBox, InventoryText };
+const Item = styled.div`
+margin-left: 8px;
+color: #00ff2b;
+:nth-of-type(2n) {
+    color: #a7fbb6;
+}
+`
+
+export { GameContainer, GameText, MainText, ClickIcon, Choices, LeftChoice, RightChoice, InventoryBox, InventoryText, Item };
