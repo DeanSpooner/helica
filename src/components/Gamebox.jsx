@@ -9,19 +9,30 @@ import {
   RightChoice,
   InventoryBox,
   InventoryText,
-  Item
+  Item,
+  HealthDisplay,
+  HealthMeter,
 } from "./Gamebox.styles";
 import Typewriter from "typewriter-effect";
 import useSound from "use-sound";
 import clickSound from "../assets/audio/click.mp3";
 import handIcon from "../assets/icons/hand.png";
 
-const Gamebox = ({isPlaying, choices, currentFlag, setCurrentFlag, upcomingFlag, setUpcomingFlag}) => {
+const Gamebox = ({
+  isPlaying,
+  choices,
+  currentFlag,
+  setCurrentFlag,
+  upcomingFlag,
+  setUpcomingFlag,
+}) => {
   const [currentColor, setCurrentColor] = useState("#151515");
   const [prevColor, setPrevColor] = useState("#151515");
   const [bgChange, setBgChange] = useState(false);
   const [playClick] = useSound(clickSound);
   const [inventory, setInventory] = useState([]);
+  const [maxHealth, setMaxHealth] = useState(10);
+  const [currentHealth, setCurrentHealth] = useState(10);
 
   useEffect(() => {
     setTimeout(() => {
@@ -30,14 +41,44 @@ const Gamebox = ({isPlaying, choices, currentFlag, setCurrentFlag, upcomingFlag,
   }, [upcomingFlag]);
 
   useEffect(() => {
-   if (choices[currentFlag].color && choices[currentFlag].color !== currentColor){
-    setPrevColor(currentColor);
-    setCurrentColor(choices[currentFlag].color);
-    setBgChange(true);
-    setTimeout(() => {
-      setBgChange(false);
-   }, 2000);
-  }}, [currentFlag, currentColor]);
+    if (
+      choices[currentFlag].color &&
+      choices[currentFlag].color !== currentColor
+    ) {
+      setPrevColor(currentColor);
+      setCurrentColor(choices[currentFlag].color);
+      setBgChange(true);
+      setTimeout(() => {
+        setBgChange(false);
+      }, 2000);
+    }
+  }, [currentFlag, currentColor]);
+
+  useEffect(() => {
+    if (choices[currentFlag].damage) {
+      if (currentHealth - choices[currentFlag].damage <= 0) {
+        setCurrentHealth(currentHealth - choices[currentFlag].damage);
+      } else if (currentHealth - choices[currentFlag].damage < 0) {
+        setCurrentHealth(0);
+      }
+    }
+    if (currentHealth === 0) {
+      setCurrentFlag("gameover");
+      setCurrentHealth(maxHealth);
+    }
+  }, [currentFlag]);
+
+  useEffect(() => {
+    if (choices[currentFlag].heal && choices[currentFlag].heal === "full") {
+      setCurrentHealth(maxHealth);
+    } else if (choices[currentFlag].heal) {
+      if (currentHealth + choices[currentFlag].heal <= maxHealth) {
+        setCurrentHealth(currentHealth + choices[currentFlag].heal);
+      } else {
+        setCurrentHealth(maxHealth);
+      }
+    }
+  }, [currentFlag]);
 
   const handleMainClick = () => {
     isPlaying && playClick(); // Not working as intended? Doesn't acknowledge isPlaying state?
@@ -52,7 +93,9 @@ const Gamebox = ({isPlaying, choices, currentFlag, setCurrentFlag, upcomingFlag,
 
   const handleItemUseClick = () => {
     isPlaying && playClick(); // Not working as intended? Doesn't acknowledge isPlaying state?
-    const filteredItems = inventory.filter(item => item !== choices[currentFlag].item)
+    const filteredItems = inventory.filter(
+      (item) => item !== choices[currentFlag].item
+    );
     setInventory(filteredItems);
     setUpcomingFlag(choices[currentFlag].dest);
   };
@@ -74,7 +117,11 @@ const Gamebox = ({isPlaying, choices, currentFlag, setCurrentFlag, upcomingFlag,
   };
 
   return (
-    <GameContainer prevColor={prevColor} currentColor={currentColor} bgChange={bgChange}>
+    <GameContainer
+      prevColor={prevColor}
+      currentColor={currentColor}
+      bgChange={bgChange}
+    >
       <GameText>
         {choices[currentFlag].type === "story" && (
           <MainText clickable onClick={handleMainClick}>
@@ -174,11 +221,27 @@ const Gamebox = ({isPlaying, choices, currentFlag, setCurrentFlag, upcomingFlag,
           </>
         )}
       </GameText>
-      {inventory.length > 0 && <InventoryBox>
-        <InventoryText>
-          Inventory: {inventory.map(item => <Item className="item">{item}</Item>)}
-        </InventoryText>
-      </InventoryBox>}
+      {inventory.length > 0 && (
+        <InventoryBox>
+          <InventoryText>
+            Inventory:{" "}
+            {inventory.map((item) => (
+              <Item className="item">{item}</Item>
+            ))}
+          </InventoryText>
+        </InventoryBox>
+      )}
+      <HealthDisplay>
+        <HealthMeter
+          min={0}
+          max={maxHealth}
+          value={currentHealth}
+          low={(maxHealth / 10) * 2.51}
+          high={(maxHealth / 10) * 5.01}
+          optimum={maxHealth}
+        />{" "}
+        {currentHealth}/{maxHealth} HP
+      </HealthDisplay>
     </GameContainer>
   );
 };

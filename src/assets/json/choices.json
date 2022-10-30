@@ -1,7 +1,7 @@
 {
     "0": {
         "text": "",
-        "type": "blank"        
+        "type": "blank"
     },
     "0a": {
         "text": "...",
@@ -106,7 +106,6 @@
         "type": "story",
         "dest": "12",
         "color": "#280202"
-
     },
     "11b1": {
         "text": "You stay on the boat for a few more minutes to gather yourself - but nothing changes...",
@@ -844,11 +843,12 @@
         "dest": "woods6b6a2"
     },
     "woods6b6a2": {
-        "text": "...but the wolf leaps at you!.",
+        "text": "...but the wolf leaps at you! 10 HP lost!",
         "type": "story",
         "dest": "woods6b6a3",
         "color": "#F55952",
-        "music": "battle"
+        "music": "battle",
+        "damage": 10
     },
     "woods6b6a3": {
         "text": "...Everything goes black.",
@@ -885,10 +885,10 @@
         "dest": "woods6b6b6"
     },
     "woods6b6b6": {
-            "text": "Lantern broken.",
-            "type": "used",
-            "item": "Lantern",
-            "dest": "woods7"
+        "text": "Lantern broken.",
+        "type": "used",
+        "item": "Lantern",
+        "dest": "woods7"
     },
     "woods7": {
         "text": "You are now alone in the woods. All is quiet again.",
@@ -900,7 +900,7 @@
         "text": "But now, with no lantern, how will you continue..?",
         "type": "story",
         "dest": "end1"
-    },   
+    },
     "end1": {
         "text": "Thank you for playing. Helica will continue in the next update.",
         "type": "story",
@@ -911,6 +911,14 @@
     "end2": {
         "text": "By Dean Spooner. Click to restart.",
         "type": "restart",
-        "dest": "0a"
+        "dest": "0a",
+        "heal": "full"
+    },
+    "gameover": {
+        "text": "...Oh dear. It appears you have suffered too much damage...",
+        "type": "story",
+        "dest": "end1",
+        "music": "null",
+        "color": "#000"
     }
 }

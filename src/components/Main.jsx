@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from "react";
 import Gamebox from "./Gamebox";
 import moonlight from "../assets/audio/music/moonlight.mp3";
-import explorer from "../assets/audio/music/explorer.mp3"
-import stranger from "../assets/audio/music/stranger.mp3"
-import search from "../assets/audio/music/search.mp3"
-import mystery from "../assets/audio/music/mystery.mp3"
-import woods from "../assets/audio/music/woods.mp3"
-import battle from "../assets/audio/music/battle.mp3"
-import tension from "../assets/audio/music/tension.mp3"
-import crash from "../assets/audio/sfx/crash.mp3"
-import steps from "../assets/audio/sfx/steps.mp3"
-import knock from "../assets/audio/sfx/knock.mp3"
-import thud from "../assets/audio/sfx/thud.mp3"
+import explorer from "../assets/audio/music/explorer.mp3";
+import stranger from "../assets/audio/music/stranger.mp3";
+import search from "../assets/audio/music/search.mp3";
+import mystery from "../assets/audio/music/mystery.mp3";
+import woods from "../assets/audio/music/woods.mp3";
+import battle from "../assets/audio/music/battle.mp3";
+import tension from "../assets/audio/music/tension.mp3";
+import crash from "../assets/audio/sfx/crash.mp3";
+import steps from "../assets/audio/sfx/steps.mp3";
+import knock from "../assets/audio/sfx/knock.mp3";
+import thud from "../assets/audio/sfx/thud.mp3";
 import musicIcon from "../assets/icons/music.png";
 import pauseIcon from "../assets/icons/pause.png";
 import choices from "../assets/json/choices.json";
@@ -31,7 +31,7 @@ const Main = () => {
   const [currentMusic, setCurrentMusic] = useState(null);
   const [currentSfx, setCurrentSfx] = useState(null);
   const [currentFlag, setCurrentFlag] = useState(0);
-  const [upcomingFlag, setUpcomingFlag] = useState('0a');
+  const [upcomingFlag, setUpcomingFlag] = useState("0a");
 
   useEffect(() => {
     if (started) {
@@ -52,7 +52,7 @@ const Main = () => {
       choices[currentFlag].music === "woods" && setCurrentMusic(woods);
       choices[currentFlag].music === "battle" && setCurrentMusic(battle);
       choices[currentFlag].music === "tension" && setCurrentMusic(tension);
-   }
+    }
   }, [currentFlag]);
 
   useEffect(() => {
@@ -62,20 +62,21 @@ const Main = () => {
       choices[currentFlag].sfx === "steps" && setCurrentSfx(steps);
       choices[currentFlag].sfx === "knock" && setCurrentSfx(knock);
       choices[currentFlag].sfx === "thud" && setCurrentSfx(thud);
-   }
+    }
   }, [currentFlag, isPlaying]);
 
   return (
     <div className="main">
-        <Sound
-          url={currentMusic}
-          playStatus={isPlaying ? Sound.status.PLAYING : Sound.status.pause}
-          loop={true}
-        />
-        <Sound url={currentSfx} 
+      <Sound
+        url={currentMusic}
+        playStatus={isPlaying ? Sound.status.PLAYING : Sound.status.pause}
+        loop={true}
+      />
+      <Sound
+        url={currentSfx}
         playStatus={isPlaying ? Sound.status.PLAYING : Sound.status.pause}
         loop={false}
-        />
+      />
       <Title>Helica</Title>
       <MainContainer started={started}>
         {!gameboxDisplay && (
@@ -85,13 +86,24 @@ const Main = () => {
             </StartButton>
           </StartButtonContainer>
         )}
-        {gameboxDisplay && <Gamebox isPlaying={isPlaying} choices={choices} currentFlag={currentFlag} setCurrentFlag={setCurrentFlag} upcomingFlag={upcomingFlag} setUpcomingFlag={setUpcomingFlag}/>}
+        {gameboxDisplay && (
+          <Gamebox
+            isPlaying={isPlaying}
+            choices={choices}
+            currentFlag={currentFlag}
+            setCurrentFlag={setCurrentFlag}
+            upcomingFlag={upcomingFlag}
+            setUpcomingFlag={setUpcomingFlag}
+          />
+        )}
       </MainContainer>
       <MusicToggle
         isPlaying={isPlaying}
         onClick={() => {
           setIsPlaying(!isPlaying);
-          currentMusic !== null && isPlaying ? currentMusic.pause() : currentMusic.play();
+          currentMusic !== null && isPlaying
+            ? currentMusic.pause()
+            : currentMusic.play();
         }}
       >
         {!isPlaying ? (
